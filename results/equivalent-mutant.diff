@@ -1,0 +1,17 @@
+diff --git a/src/main/java/mn/edu/must/sqat/ScholarshipCalculator.java b/src/main/java/mn/edu/must/sqat/ScholarshipCalculator.java
+index 235b855..27372b8 100644
+--- a/src/main/java/mn/edu/must/sqat/ScholarshipCalculator.java
++++ b/src/main/java/mn/edu/must/sqat/ScholarshipCalculator.java
+@@ -34,11 +34,11 @@ public class ScholarshipCalculator {
+         double total = 0;
+         for (double s : scores) {
+             switch (letterGrade(s)) {
++                default:  break;
+                 case "A": total += 4; break;
+                 case "B": total += 3; break;
+                 case "C": total += 2; break;
+                 case "D": total += 1; break;
+-                default:  break;
+             }
+         }
+         return total / scores.length;

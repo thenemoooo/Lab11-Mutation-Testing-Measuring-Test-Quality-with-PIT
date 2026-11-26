@@ -80,3 +80,15 @@ Starter PIT тайлангийн `SURVIVED` мутант бүрийг эхний
 | 54 | `replaced int return with 0` ×1; `changed conditional boundary` ×1; нөхцөл → `true` ×1, `false` ×1 | Тест дутуу | 50%-ийн яг утга болон GPA 3.0 зааг утгыг шалгаагүй тул буцаалт болон нөхцөлийн өөрчлөлт амьд үлдсэн. | GPA 3.0-ийг яг 50, 2.99-ийг 0 гэж шалгах. |
 
 `results/a-survivor-count.txt` файлд энэ хүснэгтийн нийлбэрийг Starter PIT тайлангийн 46 амьд мутанттай тулгасан шалгалтыг хадгална.
+
+## Хэсэг C — Гар мутант болон эквивалент мутант
+
+### C1. Зааг утгын гар мутант
+
+`scholarship()` дахь `gpa >= 3.8` нөхцөлийг түр `gpa > 3.8` болгож `mvn test` ажиллуулахад 12 тестийн 1 нь уналаа. `scholarship_fullAwardBoundaries` тестийн `calc.scholarship(3.8, 15, false)` хүлээлт **100**, харин мутант кодын бодит үр дүн **70** гарсан: `ScholarshipCalculatorTest.java:80`, `expected: <100> but was: <70>`. Энэ нь 3.8 зааг утгыг яг шалгадаг B2 тест ≥ болон > хоёрын ялгааг барьж чаддаг эсэхийг харуулна; бүх гаралтыг `results/mvn-test-manual-mutant.txt`-т хадгалсан.
+
+### C2. Эквивалент гар мутант
+
+`gpa()`-ийн `switch`-ийн `default` label-ыг ил тод `case`-үүдийн өмнө тавьсан хувилбарыг туршихад 12 тест бүгд амжилттай давлаа. Java-ийн `switch`-д `default` label-ийн бичвэрийн дараалал нь тохирох `case` сонголтыг өөрчилдөггүй: ил тод `case` таарахгүй бол `default` сонгогддог, мөн энэ `switch`-ийн case болгон `break`-ээр төгсдгөн тул fall-through үүсэхгүй. Тиймээс энэ хувилбар нь **behaviorally equivalent**; PIT-ийн `Changed switch default to be first case` мутатортай ижил биш бөгөөд PIT-ийн хувилбар нь case matching-ийн үйлдлийг өөрчилж, F оролтын GPA-ийг буруу болгож чадна.
+
+Мутантын diff-ийг `results/equivalent-mutant.diff`, бүх тестийн гаралтыг `results/mvn-test-equivalent-mutant.txt`-т хадгалсан. Хоёр туршилтын дараа `src/main/java/mn/edu/must/sqat/ScholarshipCalculator.java`-ийг Starter commit-тэйгээ ижил болгож сэргээв.
