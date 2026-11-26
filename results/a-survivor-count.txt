@@ -1,0 +1,4 @@
+Starter PIT: Generated 63, Killed 17, Survived 46
+README A table: 15 grouped rows, 46 mutations
+Equivalent: 1; test gaps: 45
+Check: PASS — every Starter SURVIVED mutation is represented.
