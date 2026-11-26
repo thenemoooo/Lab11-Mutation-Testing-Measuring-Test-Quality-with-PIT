@@ -1,0 +1,21 @@
+Fresh-clone verification — Лаб 11
+
+Clone command: git clone --no-hardlinks /Users/nemo/Documents/Qoder/2026-11-26/d27472f8/Lab11-Mutation-Testing-Measuring-Test-Quality-with-PIT /tmp/lab11-clone-verify-r3kdalur/repo
+Clone HEAD: ce8283874f5614db5814b16634bb32b4912a6a2a
+Original HEAD: ce8283874f5614db5814b16634bb32b4912a6a2a
+Commit count: 9
+First commit: df4b155a964742bb4e1815c887ff5e771d2277f8
+
+Maven command: mvn -f /tmp/lab11-clone-verify-r3kdalur/repo/pom.xml clean verify
+Maven result: BUILD SUCCESS; Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
+
+PIT command: mvn -f /tmp/lab11-clone-verify-r3kdalur/repo/pom.xml test-compile org.pitest:pitest-maven:mutationCoverage
+PIT result: Generated 63 mutations Killed 63 (100%)
+README B2 row: 12 tests; 63 / 63 mutations; 100%; 0 survived
+
+Production source SHA-256 (original): 4a7cf0aa8437c3981ebcd6097a03fafbe46477dc46c62f81d8e74f93e4f8feef
+Production source SHA-256 (clone):    4a7cf0aa8437c3981ebcd6097a03fafbe46477dc46c62f81d8e74f93e4f8feef
+Starter diff: empty
+Tracked target/ files: 0
+
+RESULT: PASS — fresh clone reproduces the committed README measurements.
