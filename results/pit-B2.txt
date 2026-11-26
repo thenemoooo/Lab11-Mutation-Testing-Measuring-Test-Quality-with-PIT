@@ -69,13 +69,13 @@
 [INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:1.10.2 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
 [INFO] Mutating from /Users/nemo/Documents/Qoder/2026-11-26/d27472f8/Lab11-Mutation-Testing-Measuring-Test-Quality-with-PIT/target/classes
 [INFO] Replacing properties in argLine -javaagent:/Users/nemo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Users/nemo/Documents/Qoder/2026-11-26/d27472f8/Lab11-Mutation-Testing-Measuring-Test-Quality-with-PIT/target/jacoco.exec
-12:56:31 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
-12:56:31 AM PIT >> INFO : Created 1 mutation test units in pre scan
-12:56:32 AM PIT >> INFO : Sending 2 test classes to minion
-12:56:32 AM PIT >> INFO : Sent tests to minion
-/-\|/-\|/-\|12:56:32 AM PIT >> INFO : Calculated coverage in 0 seconds.
-12:56:32 AM PIT >> INFO : Created 1 mutation test units
-/12:56:32 AM PIT >> INFO : Completed in 0 seconds
+1:12:58 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+1:12:58 AM PIT >> INFO : Created 1 mutation test units in pre scan
+1:12:58 AM PIT >> INFO : Sending 2 test classes to minion
+1:12:58 AM PIT >> INFO : Sent tests to minion
+/-\|/-\|/-\|1:12:58 AM PIT >> INFO : Calculated coverage in 0 seconds.
+1:12:58 AM PIT >> INFO : Created 1 mutation test units
+/1:12:59 AM PIT >> INFO : Completed in 1 seconds
 ================================================================================
 - Mutators
 ================================================================================
@@ -142,7 +142,7 @@
 > build mutation tests : < 1 second
 > run mutation analysis : < 1 second
 --------------------------------------------------------------------------------
-> Total  : < 1 second
+> Total  : 1 seconds
 --------------------------------------------------------------------------------
 ================================================================================
 - Statistics
@@ -155,6 +155,6 @@ Enhanced functionality available at https://www.arcmutate.com/
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.601 s
-[INFO] Finished at: 2026-11-27T00:56:32+08:00
+[INFO] Total time:  1.733 s
+[INFO] Finished at: 2026-11-27T01:12:59+08:00
 [INFO] ------------------------------------------------------------------------
